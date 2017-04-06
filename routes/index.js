@@ -10,6 +10,6 @@ router.get('/test', function (req, res, next) {
 });
 
 router.post('/test', function (req, res, next) {
-  res.send("Peticion: ", req.body);
+  res.send(req.body.test);
 });
 module.exports = router;
