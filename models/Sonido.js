@@ -1,10 +1,7 @@
 var mongoose = require('mongoose');
 
-var DaySchema = new mongoose.Schema({
-  day: Date,
-}, { collection: 'sonometro-days' });
-  }
-  this.save(callback);
-}
+var SonidoSchema = new mongoose.Schema({
+  date: Date
+}, { collection: 'sonidos' });
 
-mongoose.model('Day', DaySchema);
+mongoose.model('Sonido', SonidoSchema);
