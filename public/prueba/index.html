@@ -12,6 +12,9 @@
       <span ng-click="incrementUpvotes(post)">^</span>
       {{post.title}} - upvotes: {{post.upvotes}}
     </div>
+    <div ng-repeat="element in sounds">
+      {{element.usuario}} - {{element.sonido}} - {{element.date}}
+    </div>
     <form ng-submit="addPost()">
   <input type="text" placeholder="Title" ng-model="title"></input>
   <br>
