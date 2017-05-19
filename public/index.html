@@ -1,25 +1,30 @@
 <html>
 <head>
-  <title>My Angular App!</title>
+  <title>Sonómetro</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script src="app.js"></script>
-  <script src="style.css"></script>
+  <script src="javascripts/java.js"></script>
+  <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-<body>
-	<h1>SONÓMETRO</h1>
-	Esta es una página de prueba.
+<body ng-app="Sonometro" ng-controller="MainCtrl">
+	<h1 align="center">SONÓMETRO</h1>
+	{{text}}
 	<br>
 	<br>
-	<table style="width:50%" align="center">
-  		<tr>
-    		<th>Número de Serie</th>
-    		<th>Sonido</th> 
-  		</tr>
- 		<tr>
-    		<td>X12329739D</td>
-    		<td>66</td> 
-  		</tr>
-	</table>
+	     <table style="width:50%" align="center">
+  		    <tr>
+    		    <th>Número de Serie</th>
+            <th>Data</th>
+    		    <th>Sonido</th> 
+  		    </tr>
+ 		      <tr ng-repeat="element in sounds">
+    		    <td>{{element.usuario}}</td>
+            <td>{{element.date}} </td>
+    		    <td>{{element.sonido}}</td> 
+  		    </tr>
+	    </table>
+    
 	<br>
 </body>
 </html>
+
+

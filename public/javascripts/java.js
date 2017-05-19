@@ -1,9 +1,9 @@
-var app = angular.module('flapperNews', []);
+var app = angular.module('Sonometro', []);
 
 app.controller('MainCtrl', [
 '$scope',
 function($scope){
-  $scope.test = 'Hello world!';
+  $scope.test = 'Esta es una página web de prueba!';
   $scope.sounds = [{
     usuario: "sono1",
     sonido: 124,
