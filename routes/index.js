@@ -8,8 +8,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/datos', function (req, res, next) {
-  res.send("Hola!");
+router.get('/sonidos', function(req, res, next) {
+  Sonido.find(function(err, sonidos){
+    if(err){ return next(err); }
+    res.json(sonidos);
+  });
 });
 
 router.post('/datos', function(req, res, next){

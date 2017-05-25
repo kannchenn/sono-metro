@@ -2,19 +2,21 @@
 <head>
   <title>Sonómetro</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script src="javascripts/java.js"></script>
+  <script src="javascripts/sonidoController.js"></script>
+  <script src="javascripts/front.js"></script>
+  <script src="javascripts/sonidoService.js"></script>
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-<body ng-app="Sonometro" ng-controller="MainCtrl">
-	<h1 align="center">SONÓMETRO</h1>
+<body ng-app="sono" ng-controller="MainCtrl">
+<h1 align="center">SONÓMETRO</h1>
 	{{text}}
 	<br>
 	<br>
-	     <table style="width:50%" align="center">
+	     <table style="width:60%" align="center">
   		    <tr>
     		    <th>Número de Serie</th>
             <th>Data</th>
-    		    <th>Sonido</th> 
+    		    <th>Sonido(dB)</th> 
   		    </tr>
  		      <tr ng-repeat="element in sounds">
     		    <td>{{element.usuario}}</td>
@@ -22,8 +24,12 @@
     		    <td>{{element.sonido}}</td> 
   		    </tr>
 	    </table>
-    
-	<br>
+      <br>
+      <br>
+	<hr>
+    <footer>
+      <p>&copy; 2017 SEK Catalunya</p>
+    </footer>
 </body>
 </html>
 
