@@ -1,64 +1,36 @@
-<<<<<<< HEAD
 <html>
 <head>
-  <title>My Angular App!</title>
+  <title>Sonómetro</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script src="app.js"></script>
+  <script src="javascripts/sonidoController.js"></script>
+  <script src="javascripts/front.js"></script>
+  <script src="javascripts/sonidoService.js"></script>
+  <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-<body>
-	<h1>SONÓMETRO</h1>
- <table>
-   <tr>
-      <td>Sonido<td>
-    </tr>
-  </table>
+<body ng-app="sono" ng-controller="MainCtrl">
+<h1 align="center">SONÓMETRO</h1>
+	{{text}}
 	<br>
-	<img src="http://contaminacionacustica.net/wp-content/uploads/2015/04/sonometro-anself-hyelec.jpg">
-  <body ng-app="flapperNews" ng-controller="MainCtrl">
-    <div>
-      {{test}}
-    </div>
+	<br>
+	     <table style="width:60%" align="center">
+  		    <tr>
+    		    <th>Número de Serie</th>
+            <th>Data</th>
+    		    <th>Sonido(dB)</th> 
+  		    </tr>
+ 		      <tr ng-repeat="element in sounds">
+    		    <td>{{element.usuario}}</td>
+            <td>{{element.date}} </td>
+    		    <td>{{element.sonido}}</td> 
+  		    </tr>
+	    </table>
+      <br>
+      <br>
+	<hr>
+    <footer>
+      <p>&copy; 2017 SEK Catalunya</p>
+    </footer>
 </body>
 </html>
-=======
-<html>
-<head>
-  <title>My Angular App!</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script src="app.js"></script>
-  <style>
-	table, th, td {
-    	border: 1px solid black;
-    	border-collapse: collapse;
-	}
-	th, td {
-    	padding: 5px;
-    	text-align: left;    
-	}
-</style>
-</head>
-<body>
-	<h1>SONÓMETRO</h1>
-	Esta es una página de prueba.
-	<br>
-	<br>
-	<table style="width:50%" align="center">
-  		<tr>
-    		<th>Número de Serie</th>
-    		<th>Sonido</th> 
-  		</tr>
- 		<tr>
-    		<td>X12329739D</td>
-    		<td>66</td> 
-  		</tr>
-	</table>
-	<br>
-<img src="http://contaminacionacustica.net/wp-content/uploads/2015/04/sonometro-anself-hyelec.jpg">
 
-<body ng-app="flapperNews" ng-controller="MainCtrl">
-  <div>
-    {{test}}
-  </div>
-</body>
-</html>
->>>>>>> origin/Random
+
