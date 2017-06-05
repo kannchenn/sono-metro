@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Raleway", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -17,3 +17,11 @@ th, td {
     	text-align: left;    
 	}
 
+div.jumbotron {
+	padding:30px;
+	border-radius: 25px;
+}
+
+img {
+	float: left
+}
