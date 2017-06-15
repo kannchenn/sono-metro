@@ -1,37 +1,27 @@
 <html>
 <head>
   <title>Sonómetro</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="javascripts/sonidoController.js"></script>
   <script src="javascripts/front.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="javascripts/grafico.js"></script>
   <script src="javascripts/sonidoService.js"></script>
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body ng-app="sono" ng-controller="MainCtrl">
 <h1 align="center">DATOS</h1>
-      <br>
-    <div class="content">
+	<br>
+  <div class="content">
       <p class="col-md-1 col-md-offset-5"><a class="btn btn-default" href="data.html" role="button"> Tabla &raquo;</a></p>
       <p class="col-md-6"><a class="btn btn-default" href="grafico.html" role="button"> Gráfico &raquo;</a></p>
-    </div>
+      </div>
+	<br>
+  <br>
       <br>
-      <br>
-    <div class="container-fluid">
-      <br>
-      <br>
-	    <table style="width:60%" align="center">
-  		    <tr>
-    		    <th>Número de Serie</th>
-            <th>Fecha y hora</th>
-    		    <th>Sonido(dB)</th> 
-  		    </tr>
- 		      <tr ng-repeat="element in sounds">
-    		    <td>{{element.usuario}}</td>
-            <td>{{element.date}} </td>
-    		    <td>{{element.sonido}}</td> 
-  		    </tr>
-	    </table>
+	    <div align="center" id="line_top_x"></div>
       <br>
       <br>
       <p align="center"><a class="btn btn-default" href="index.html" role="button"> Volver &raquo;</a></p>
