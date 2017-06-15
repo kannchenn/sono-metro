@@ -9,7 +9,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/sonidos', function(req, res, next) {
-  Sonido.find(function(err, sonidos){
+  Sonido.find({
+    date: {
+        $gte: new Date();
+        d.setHours(d.getHours() - 2);
+    }
+  }, function(err, sonidos){
     if(err){ return next(err); }
     res.json(sonidos);
   });
