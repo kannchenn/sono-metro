@@ -9,10 +9,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/sonidos', function(req, res, next) {
+  var limit = new Date();
+  limit.setHours(limit.getHours() - 2);
   Sonido.find({
     date: {
-        $gte: new Date();
-        d.setHours(d.getHours() - 2);
+        $gte: limit
     }
   }, function(err, sonidos){
     if(err){ return next(err); }
